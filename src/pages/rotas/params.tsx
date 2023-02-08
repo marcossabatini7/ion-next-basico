@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export default function BuscarPorId() {
-	const { query } = useRouter()
+function Params() {
+	const route = useRouter()
 
 	return (
 		<>
-			<h1>Rotas / {query.id} / BuscarPorId</h1>
+			<h1>Rotas Params</h1>
+
+			<h3 style={{ marginBottom: 20 }}>Params:</h3>
+			<h4>Nome: {route.query.nome}</h4>
+			<h4>E-mail: {route.query.email}</h4>
 
 			<Link href="/rotas">
 				<button
@@ -18,3 +22,5 @@ export default function BuscarPorId() {
 		</>
 	)
 }
+
+export default Params
