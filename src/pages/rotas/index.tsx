@@ -1,9 +1,7 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import router from 'next/router'
 
 export default function Rotas() {
-	const router = useRouter()
-
 	function navegacaoSimplesPorNome(url: string) {
 		router.push(url)
 	}
